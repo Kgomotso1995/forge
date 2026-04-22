@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/forge
+          images: ghcr.io/kgomotso1995/forge
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -36,5 +36,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/kgomotso1995/forge:latest
+            ghcr.io/kgomotso1995/forge:${{ github.sha }}
